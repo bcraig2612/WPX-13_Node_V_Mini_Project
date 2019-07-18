@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -13,8 +14,8 @@ class App extends Component {
   }
 
   async login() {
-    let { email, password } = this.state;
-    let res = await axios.post('/auth/login', {
+    const { email, password } = this.state;
+    const res = await axios.post('/auth/login', {
       email,
       password
     });
@@ -22,8 +23,8 @@ class App extends Component {
   }
 
   async signup() {
-    let { email, password } = this.state;
-    let res = await axios.post('/auth/signup', {
+    const { email, password } = this.state;
+    const res = await axios.post('/auth/signup', {
       email,
       password
   });
@@ -36,7 +37,7 @@ class App extends Component {
   }
 
   render() {
-    let { loggedInUser, email, password } = this.state;
+    const { loggedInUser, email, password } = this.state;
     return (
       <div className="form-container done">
         <div className="login-form">
